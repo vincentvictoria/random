@@ -1,6 +1,6 @@
 /**
 Random
-@author vincent (vincent@vincentvictoria.com)
+@author vincent <vincent@vincentvictoria.com>
 @see {@link https://www.vincentvictoria}
 @see {@link https://www.github.com/vincentvictoria/random}
 */
