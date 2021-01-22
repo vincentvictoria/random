@@ -52,17 +52,12 @@ export class Random {
         return s;
     }
 
-    pick<T>( ...args:T[] )/*:T except 2 condition*/ {
+    pick<T>( ...args:T[]|T[][] ):T|T[] {
         if ( args.length == 0 )
-            return undefined;
-        else if ( args.length == 1 )
-        {
-            var arr = args[0];
-            if ( arr instanceof Array )
-                return arr[ this.int( 0, arr.length ) ];
-            else
-                return arr;
-        }
+            throw 'cannot pick from nothing';
+
+        if(args.length == 1 && args[0] instanceof Array)
+            return args[0][ this.int( 0, args[0].length ) ];
         else
             return args[ this.int( 0, args.length ) ];
     }
@@ -81,4 +76,3 @@ export class Random {
 }
 
 export default Random;
-
